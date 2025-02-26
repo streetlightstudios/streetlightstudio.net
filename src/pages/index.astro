@@ -1,7 +1,19 @@
 ---
 import "../styles/global.css";
+import "@fontsource/raleway";
+import "@fontsource/quicksand";
+import "@fontsource/dosis";
+
+import Image from "astro/components/Image.astro";
+
+import lantern from "../images/lantern.png"
+import glow from "../images/glow.png"
+import mainBackground from "../images/streetlight-main-background.png"
+import streetlightMainTitle from "../images/streetlight-studio-main-title.png";
+import previewOne from "../images/preview-1.jpg";
 ---
 
+<!-- TODO: Refactor code into seperate components for each section -->
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -11,12 +23,338 @@ import "../styles/global.css";
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1 class="">Astro</h1>
+		<nav>
+			<ul>
+				<li>
+					ABOUT US
+				</li>
+				<li>
+					CAMPAIGN
+				</li>
+				<li>
+					GAMES
+				</li>
+				<li>
+					CONCEPT ART
+				</li>
+				<li>
+					THE TEAM
+				</li>
+			</ul>
+		</nav>
+		<Image src={mainBackground} alt="" id="hero-background"/>
+		<Image src={lantern} alt="Lantern 1" id="lantern-1"/>
+		<Image src={glow} alt="Glow 1" id="glow-1"/>
+		<Image src={lantern} alt="Lantern 2" id="lantern-2"/>
+		<Image src={glow} alt="Glow 2" id="glow-2"/>
+
+		<section id="hero">
+			<Image src={streetlightMainTitle} alt="Streetlight Studios" id="hero-title"/>
+			<p id="hero-description">
+				Lorem ipsum dolor sit amet. Qui eligendi omnis est quisquam quod qui ipsa accusantium est necessitatibus.
+			</p>
+		</section>
+		<section id="about-us">
+			<h1>ABOUT US</h1>
+			<p>Streetlight Studio's team is built of 18 employees with diverse backgrounds, all of which have decades worth of development experience in entertainment and technology. from our emmy award winning producers, to our developers with decades of programming and development, we've come together to disrupt the games and entertainment industry. by providing an agile footprint with cost-effective measures, we can circumvent the massive overspending that has plagued the games industry and bring the dreams of clients to life. streetlight studios is proudly owned entirely by people of color.</p>
+		</section>
+		<section id="top-campaigns">
+			<h1>TOP CAMPAIGNS</h1>
+			<div id="campaigns">
+				<div/>
+				<div/>
+			</div>
+			<button >Learn More</button>
+		</section>
+		<section id="our-games">
+			<h1>OUR GAMES</h1>
+			<div id="game-preview-main-wrapper">
+				<div id="game-preview-main">
+					<Image src={previewOne} alt="Main Preview" id="preview-main-image"/>
+					<div id="preview-data">
+						<div id="preview-description">
+							<h1>LOREM IPSUM DOLOR</h1>
+							<p>Lorem ipsum dolor sit amet. Et blanditiis earum et voluptas odio ad nobis voluptatem sit iure deserunt ut quia numquam ut sint commodi et officiis dolores. Qui similique molestias est quod inventore cum doloribus nihil hic itaque illum in provident quibusdam.</p>
+						</div>
+						<button>Watch</button>
+					</div>
+				</div>
+			</div>
+			<!-- TODO: Implement it dynamically with Astro DB -->
+			<div id="game-previews">
+
+				<div>
+
+				</div>
+				<div>
+
+				</div>
+				<div>
+
+				</div>
+				<div>
+
+				</div>
+			</div>
+		</section>
 	</body>
 </html>
 
 <style>
 	body {
+		position: relative;
+		color: white;
 		background-color: #24152A;
+		font-family: "Quicksand";
+		width: 100vw;
+		overflow-x: hidden;
+		user-select: none;
 	}
+
+	p {
+		text-align: center;
+		font: normal normal bold 25px/29px Quicksand;
+		letter-spacing: 0px;
+		opacity: 1;
+		width: 30%;
+		z-index: 2;
+	}
+	nav {
+		position: absolute;
+		top: 0;
+		background-color: #24152AE3;
+		font: normal normal medium 23px/27px "Raleway";
+		opacity: 0.8;
+		height: 80px;
+		width: 100%;
+		z-index: 100;
+	}
+	nav > ul {
+		display: flex;
+		justify-content:  center;
+		align-items: center;
+		height: 100%;
+	}
+	nav > ul > li {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding: 0 3rem;
+		user-select: none;
+		cursor: pointer;
+	}
+	nav > ul > li:hover {
+		background-color: gray;
+	}
+	#hero {
+		height: 100vh;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		overflow: visible;
+	}
+
+	#hero-background {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		z-index: 1;
+		object-fit: cover;
+		object-position: 0% 20%;
+	}
+	
+	#lantern-1 {
+		position: absolute;
+		z-index: 3;
+		width: 50%;
+		top: 30%;
+		right: -20%;
+		object-fit: contain;
+	}
+
+	#glow-1 {
+		position: absolute;
+		z-index: 2;
+		width: 50%;
+		top: 30%;
+		right: -20%;
+		object-fit: contain;
+	}
+
+	#lantern-2 {
+		position: absolute;
+		z-index: 3;
+		width: 40%;
+		top: 45%;
+		left: -18%;
+		object-fit: contain;
+	}
+
+	#glow-2 {
+		position: absolute;
+		z-index: 2;
+		width: 50%;
+		top: 45%;
+		left: -25%;
+		object-fit: contain;
+	}
+	#hero-title{
+		display: block;
+		text-align: center;
+		height: 50%;
+		object-fit: contain;
+		z-index: 2;
+	}
+
+	#about-us {
+		overflow: clip;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#about-us > h1 {
+		color: #FFED68;
+		text-align: center;
+		letter-spacing: 0px;
+		font: normal normal 800 120px/20px Dosis;
+		text-shadow: 0px 0px 10px #FFDF14D4;
+		padding-top: 20vh;
+		opacity: 1;
+		line-height: 1;
+	}
+
+	#about-us > p {
+		width: 55%;
+		margin-top: 5vh;
+	}
+	#top-campaigns {
+		margin-top: 30vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#top-campaigns > h1 {
+		text-align: center;
+		font: normal normal 800 120px/20px Dosis;
+		letter-spacing: 0px;
+		color: #FFED68;
+		text-shadow: 0px 0px 10px #FFDF14D4;
+		opacity: 1;
+		line-height: 1;
+		margin-bottom: 5vh;
+	}
+
+	#top-campaigns > button {
+		text-align: center;
+		font: normal normal bold 35px/20px Quicksand;
+		letter-spacing: 0px;
+		color: #FFFFFF;
+		line-height: 1;
+		padding: 2rem 4rem;
+		opacity: 1;
+		background: #372B59 0% 0% no-repeat padding-box;
+		border-radius: 51px;
+		opacity: 1;
+	}
+	
+	#campaigns {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 5vh;
+	}
+
+	#campaigns > div {
+		height: 45vh;
+		width: 45vh;
+		background: #FFFFFF 0% 0% no-repeat padding-box;
+		box-shadow: inset 0px 3px 6px #00000029;
+		border: 10px solid #FFED68;
+		border-radius: 2rem;
+		opacity: 1;
+		margin: 0 2rem;
+	}
+
+	#our-games {
+		margin-top: 10vh;
+		background-color: #372B59;
+		padding: 5vh 0;
+	}
+
+	#our-games > h1 {
+		text-align: center;
+		font: normal normal 800 120px/20px Dosis;
+		letter-spacing: 0px;
+		color: #FFFFFF;
+		opacity: 1;
+		line-height: 1;
+	}
+
+	#game-preview-main-wrapper {
+		margin-top: 5vh;
+		display: flex;
+		height: 10%;
+		justify-content: center;
+		position: relative;
+		border-radius: 2rem;
+		overflow: hidden;
+	}
+
+	#game-preview-main{
+		height: 90%;
+		background-color: wheat;
+		border-radius: inherit;
+		overflow: inherit;
+		width: 75%;
+	}
+
+	#preview-main-image {
+		height: 100%;
+		width: 100%;
+		object-fit: fill;
+	}
+
+	#preview-data {
+		padding: 2rem;
+		display: flex;
+		background-color: black;
+		border-bottom-left-radius: inherit;
+		border-bottom-right-radius: inherit;
+		overflow: inherit;
+		opacity: 0.8;
+		position: absolute;
+		bottom: 0;
+		width: inherit;
+		justify-content: space-between;
+	}
+
+	#preview-description {
+		width: 80%;
+	}
+
+	#preview-description > h1{
+		text-align: left;
+		font: normal normal bold 70px/20px Dosis;
+		letter-spacing: 0px;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		line-height: 1;
+		opacity: 1;
+	}
+
+	#preview-description > p {
+		text-align: left;
+		font: normal normal normal 15px/20px Quicksand;
+		letter-spacing: 0px;
+		width: 100%;
+		color: #DFDEDE;
+		opacity: 1;
+	}
+
 </style>
