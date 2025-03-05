@@ -1,6 +1,6 @@
 options:
   # default_logs_bucket_behavior: "REGIONAL_USER_OWNED_BUCKET"
-  logging: "CLOUD_LOGGING_ONLY"
+  logging: "NONE"
 
 steps:
   # Step 1: Build the Docker image
@@ -23,14 +23,13 @@ steps:
 
   # Step 3: Deploy to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "gcloud"
     args:
       - "run"
       - "deploy"
       - "streetlight-website" # Cloud Run service name
       - "--image"
       - "us-central1-docker.pkg.dev/atlantean-wares-451300-g6/cloud-run-source-deploy/streetlightstudio.net/streetlight-website:$COMMIT_SHA"
-      - "--platform"
-      - "managed"
       - "--region"
       - "us-central1" # Choose the appropriate region
       - "--allow-unauthenticated"
