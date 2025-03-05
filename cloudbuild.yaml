@@ -1,5 +1,6 @@
 options:
-  default_logs_bucket_behavior: "REGIONAL_USER_OWNED_BUCKET"
+  # default_logs_bucket_behavior: "REGIONAL_USER_OWNED_BUCKET"
+  logging: "NONE"
 
 steps:
   # Step 1: Build the Docker image
