@@ -1,0 +1,29 @@
+steps:
+  # Step 1: Build the Docker image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "gcr.io/$atlantean-wares-451300-g6/streetlight-website",
+        ".",
+      ]
+
+  # Step 2: Push the Docker image to Google Container Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$atlantean-wares-451300-g6/streetlight-website"]
+
+  # Step 3: Deploy to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    args:
+      - "run"
+      - "deploy"
+      - "streetlight-website" # Cloud Run service name
+      - "--image"
+      - "gcr.io/$atlantean-wares-451300-g6/streetlight-website"
+      - "--platform"
+      - "managed"
+      - "--region"
+      - "us-central1" # Choose the appropriate region
+      - "--allow-unauthenticated"
+timeout: 1200s # Adjust the timeout as needed (default 10 minutes)
