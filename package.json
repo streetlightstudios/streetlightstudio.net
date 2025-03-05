@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "start": "echo 'No start script needed, use Nginx to serve static files.'",
+    "start": "",
     "astro": "astro"
   },
   "dependencies": {
