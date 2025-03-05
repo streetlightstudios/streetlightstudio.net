@@ -9,7 +9,7 @@ steps:
       [
         "build",
         "-t",
-        "gcr.io/atlantean-wares-451300-g6/github.com/streetlightstudios/streetlightstudio.net:$COMMIT_SHA",
+        "us-central1-docker.pkg.dev/atlantean-wares-451300-g6/cloud-run-source-deploy/streetlightstudio.net/streetlight-website:$COMMIT_SHA",
         ".",
       ]
 
@@ -18,7 +18,7 @@ steps:
     args:
       [
         "push",
-        "gcr.io/atlantean-wares-451300-g6/github.com/streetlightstudios/streetlightstudio.net:$COMMIT_SHA",
+        "us-central1-docker.pkg.dev/atlantean-wares-451300-g6/cloud-run-source-deploy/streetlightstudio.net/streetlight-website:$COMMIT_SHA",
       ]
 
   # Step 3: Deploy to Cloud Run
@@ -28,10 +28,12 @@ steps:
       - "deploy"
       - "streetlight-website" # Cloud Run service name
       - "--image"
-      - "gcr.io/atlantean-wares-451300-g6/github.com/streetlightstudios/streetlightstudio.net:$COMMIT_SHA"
+      - "us-central1-docker.pkg.dev/atlantean-wares-451300-g6/cloud-run-source-deploy/streetlightstudio.net/streetlight-website:$COMMIT_SHA"
       - "--platform"
       - "managed"
       - "--region"
       - "us-central1" # Choose the appropriate region
       - "--allow-unauthenticated"
+      - "--verbosity"
+      - "debug" # Enable debug logging
 timeout: 1200s # Adjust the timeout as needed (default 10 minutes)
