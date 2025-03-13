@@ -7,10 +7,11 @@ import "@fontsource/dosis";
 import Image from "astro/components/Image.astro";
 
 import lantern from "../images/lantern.png"
+import lanternRight from "../svg/lanterns-right.svg"
 import glow from "../images/glow.png"
 import mainBackground from "../images/streetlight-main-background.png"
-import streetlightMainTitle from "../images/streetlight-studio-main-title.png";
-import previewOne from "../images/Pathfinder_KeyArt.png";
+import streetlightMainTitle from "../svg/streetlight-studio-main-title.svg";
+import previewOne from "../images/preview-1.jpg";
 ---
 
 <!-- TODO: Refactor code into seperate components for each section -->
@@ -20,10 +21,12 @@ import previewOne from "../images/Pathfinder_KeyArt.png";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Streetlight Studios</title>
+		<link rel="icon" href="public/lanna-lanterns.svg" type="image/svg+xml" />
+		
 	</head>
 	<body>
-		<nav>
+		<!-- <nav>
 			<ul>
 				<li>
 					ABOUT US
@@ -41,10 +44,9 @@ import previewOne from "../images/Pathfinder_KeyArt.png";
 					THE TEAM
 				</li>
 			</ul>
-		</nav>
+		</nav> -->
 		<Image src={mainBackground} alt="" id="hero-background"/>
-		<Image src={lantern} alt="Lantern 1" id="lantern-1"/>
-		<Image src={glow} alt="Glow 1" id="glow-1"/>
+		<Image src={lanternRight} alt="Lantern 1" id="lantern-1"/>
 		<Image src={lantern} alt="Lantern 2" id="lantern-2"/>
 		<Image src={glow} alt="Glow 2" id="glow-2"/>
 
@@ -67,7 +69,7 @@ import previewOne from "../images/Pathfinder_KeyArt.png";
 			<button >Learn More</button>
 		</section>
 		<section id="our-games">
-			<h1>OUR GAMES</h1>
+			<h1>COMING SOON</h1>
 			<div id="game-preview-main-wrapper">
 				<div id="game-preview-main">
 					<Image src={previewOne} alt="Main Preview" id="preview-main-image"/>
@@ -171,7 +173,7 @@ import previewOne from "../images/Pathfinder_KeyArt.png";
 		z-index: 3;
 		width: 50%;
 		top: 30%;
-		right: -20%;
+		right: 0;
 		object-fit: contain;
 	}
 
@@ -242,7 +244,7 @@ import previewOne from "../images/Pathfinder_KeyArt.png";
 
 	#top-campaigns > h1 {
 		text-align: center;
-		font: normal normal 800 120px/20px Dosis;
+		font: normal normal 800 80px/20px Dosis;
 		letter-spacing: 0px;
 		color: #FFED68;
 		text-shadow: 0px 0px 10px #FFDF14D4;
@@ -271,8 +273,8 @@ import previewOne from "../images/Pathfinder_KeyArt.png";
 	}
 
 	#campaigns > div {
-		height: 45vh;
-		width: 45vh;
+		height: 30vw;
+		width: 30vw;
 		background: #FFFFFF 0% 0% no-repeat padding-box;
 		box-shadow: inset 0px 3px 6px #00000029;
 		border: 10px solid #FFED68;
@@ -299,7 +301,7 @@ import previewOne from "../images/Pathfinder_KeyArt.png";
 	#game-preview-main-wrapper {
 		margin-top: 5vh;
 		display: flex;
-		height: 10%;
+		height: 20%;
 		justify-content: center;
 		position: relative;
 		border-radius: 2rem;
@@ -307,7 +309,7 @@ import previewOne from "../images/Pathfinder_KeyArt.png";
 	}
 
 	#game-preview-main{
-		height: 90%;
+		height: %;
 		background-color: wheat;
 		border-radius: inherit;
 		overflow: inherit;
