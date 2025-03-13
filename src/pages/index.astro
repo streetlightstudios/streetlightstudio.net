@@ -25,55 +25,65 @@ import previewOne from "../images/preview-1.jpg";
 		<link rel="icon" href="public/lanna-lanterns.svg" type="image/svg+xml" />
 		
 	</head>
-	<body>
-		<!-- <nav>
-			<ul>
-				<li>
+	<body class="relative text-white bg-[#24152A] font-quicksand w-screen overflow-x-hidden select-none">
+		<nav class="absolute top-0 bg-[#24152AE3] font-[Raleway] font-medium text-[23px] leading-[27px] opacity-80 h-[80px] w-full z-[100]"
+		>
+			<ul class="flex justify-center items-center h-full">
+				<li class="flex items-center h-full px-12 select-none cursor-pointer hover:bg-gray-800">
 					ABOUT US
 				</li>
-				<li>
+				<li class="flex items-center h-full px-12 select-none cursor-pointer hover:bg-gray-800">
 					CAMPAIGN
 				</li>
-				<li>
+				<li class="flex items-center h-full px-12 select-none cursor-pointer hover:bg-gray-800">
 					GAMES
 				</li>
-				<li>
+				<li class="flex items-center h-full px-12 select-none cursor-pointer hover:bg-gray-800">
 					CONCEPT ART
 				</li>
-				<li>
+				<li class="flex items-center h-full px-12 select-none cursor-pointer hover:bg-gray-800">
 					THE TEAM
 				</li>
 			</ul>
-		</nav> -->
-		<Image src={mainBackground} alt="" id="hero-background"/>
-		<Image src={lanternRight} alt="Lantern 1" id="lantern-1"/>
-		<Image src={lantern} alt="Lantern 2" id="lantern-2"/>
-		<Image src={glow} alt="Glow 2" id="glow-2"/>
+		</nav>
+		<Image src={mainBackground} alt="" class="absolute top-0 right-0 w-full z-1 object-cover object-[0%_20%]"/>
+		<Image src={lanternRight} alt="Lantern 1" class="absolute w-1/2 top-[30%] right-0 object-contain z-1"/>
+		<Image src={lantern} alt="Lantern 2" class="absolute z-3 w-[40%] top-[45%] left-[-18%] object-contain"/>
+		<Image src={glow} alt="Glow 2" class="absolute z-2 w-1/2 top-[45%] left-[-25%] object-contain"/>
 
-		<section id="hero">
-			<Image src={streetlightMainTitle} alt="Streetlight Studios" id="hero-title"/>
-			<p id="hero-description">
+		<section class="h-screen relative flex flex-col items-center justify-center overflow-visible">
+			<Image src={streetlightMainTitle} alt="Streetlight Studios" class="block text-center h-1/2 object-contain z-2"/>
+			<p>
 				Streetlights guide you the way home. 
 			</p>
 		</section>
-		<section id="about-us">
-			<h1>ABOUT US</h1>
-			<p>Streetlight Studio's team is built of 18 employees with diverse backgrounds, all of which have decades worth of development experience in entertainment and technology. from our emmy award winning producers, to our developers with decades of programming and development, we've come together to disrupt the games and entertainment industry. by providing an agile footprint with cost-effective measures, we can circumvent the massive overspending that has plagued the games industry and bring the dreams of clients to life. streetlight studios is proudly owned entirely by people of color.</p>
+		<!-- ABOUT US -->
+		<section id="about-us" class="overflow-clip flex flex-col items-center justify-center">
+			<h1 class="text-[#FFED68] text-center tracking-normal font-[Dosis] font-extrabold text-[120px] leading-[1] pt-[20vh] opacity-100">
+				ABOUT US
+			</h1>
+			<p class="w-[80%] mt-[5vh]">
+				Streetlight Studio's team is built of 18 employees with diverse backgrounds, all of which have decades worth of development experience in entertainment and technology. from our emmy award winning producers, to our developers with decades of programming and development, we've come together to disrupt the games and entertainment industry. by providing an agile footprint with cost-effective measures, we can circumvent the massive overspending that has plagued the games industry and bring the dreams of clients to life. streetlight studios is proudly owned entirely by people of color.
+			</p>
 		</section>
-		<section id="top-campaigns">
-			<h1>TOP CAMPAIGNS</h1>
-			<div id="campaigns">
-				<div/>
-				<div/>
+		<!-- TOP CAMPAIGNS -->
+		<section id="top-campaigns" class="mt-[30vh] flex flex-col items-center justify-center">
+			<h1 class="text-center font-[Dosis] font-extrabold text-[80px] leading-[1] tracking-normal text-[#FFED68] opacity-100 mb-[5vh]">TOP CAMPAIGNS</h1>
+			<div id="campaigns" class="flex justify-between mb-[5vh]">
+				<div class="h-[30vw] w-[30vw] bg-white shadow-[inset_0px_3px_6px_#00000029] border-[10px] border-[#FFED68] rounded-[2rem] opacity-100 mx-8"/>
+				<div class="h-[30vw] w-[30vw] bg-white shadow-[inset_0px_3px_6px_#00000029] border-[10px] border-[#FFED68] rounded-[2rem] opacity-100 mx-8"/>
 			</div>
-			<button >Learn More</button>
+			<button class="text-center font-[Quicksand] font-bold text-[35px]  tracking-normal text-white leading-[1] px-16 py-8 bg-[#372B59] rounded-[51px] opacity-100">
+				Learn More
+			</button>
 		</section>
-		<section id="our-games">
-			<h1>COMING SOON</h1>
-			<div id="game-preview-main-wrapper">
-				<div id="game-preview-main">
-					<Image src={previewOne} alt="Main Preview" id="preview-main-image"/>
-					<div id="preview-data">
+		<!-- OUR GAMES -->
+		<section id="our-games" class="mt-[10vh] bg-[#372B59] py-[5vh]">
+			<h1 class="text-center font-[Dosis] font-extrabold text-[120px] tracking-normal text-white opacity-100 leading-[1]">COMING SOON</h1>
+			<div class="mt-[5vh] flex h-[20%] justify-center relative rounded-[2rem] overflow-hidden">
+				<div class="h-full rounded-[inherit] overflow-hidden w-[75%]">
+					<Image src={previewOne} alt="Main Preview" class="h-full w-full object-fill"/>
+					<div class="p-8 flex bg-black rounded-bl-inherit rounded-b-[2rem] overflow-hidden opacity-80 absolute bottom-0 w-[75%] justify-between">
 						<div id="preview-description">
 							<h1>Moondrift Memory: Prologue</h1>
 							<p>The Lillywall Guild has finally gotten their big break and has assigned you to guard a small artisan caravan that will carve the corpse of a dragon that lost a great battle with a powerful group of companions. But the battle has unearthed a ruin within the mountains. Come find what adventure lurks beneath.</p>
@@ -82,36 +92,11 @@ import previewOne from "../images/preview-1.jpg";
 					</div>
 				</div>
 			</div>
-			<!-- TODO: Implement it dynamically with Astro DB -->
-			<div id="game-previews">
-
-				<div>
-
-				</div>
-				<div>
-
-				</div>
-				<div>
-
-				</div>
-				<div>
-
-				</div>
-			</div>
 		</section>
 	</body>
 </html>
 
 <style>
-	body {
-		position: relative;
-		color: white;
-		background-color: #24152A;
-		font-family: "Quicksand";
-		width: 100vw;
-		overflow-x: hidden;
-		user-select: none;
-	}
 
 	p {
 		text-align: center;
@@ -121,223 +106,13 @@ import previewOne from "../images/preview-1.jpg";
 		width: 30%;
 		z-index: 2;
 	}
-	nav {
-		position: absolute;
-		top: 0;
-		background-color: #24152AE3;
-		font: normal normal medium 23px/27px "Raleway";
-		opacity: 0.8;
-		height: 80px;
-		width: 100%;
-		z-index: 100;
-	}
-	nav > ul {
-		display: flex;
-		justify-content:  center;
-		align-items: center;
-		height: 100%;
-	}
-	nav > ul > li {
-		display: flex;
-		align-items: center;
-		height: 100%;
-		padding: 0 3rem;
-		user-select: none;
-		cursor: pointer;
-	}
-	nav > ul > li:hover {
-		background-color: gray;
-	}
-	#hero {
-		height: 100vh;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		overflow: visible;
-	}
-
-	#hero-background {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 100%;
-		z-index: 1;
-		object-fit: cover;
-		object-position: 0% 20%;
-	}
-	
-	#lantern-1 {
-		position: absolute;
-		z-index: 3;
-		width: 50%;
-		top: 30%;
-		right: 0;
-		object-fit: contain;
-	}
-
-	#glow-1 {
-		position: absolute;
-		z-index: 2;
-		width: 50%;
-		top: 30%;
-		right: -20%;
-		object-fit: contain;
-	}
-
-	#lantern-2 {
-		position: absolute;
-		z-index: 3;
-		width: 40%;
-		top: 45%;
-		left: -18%;
-		object-fit: contain;
-	}
-
-	#glow-2 {
-		position: absolute;
-		z-index: 2;
-		width: 50%;
-		top: 45%;
-		left: -25%;
-		object-fit: contain;
-	}
-	#hero-title{
-		display: block;
-		text-align: center;
-		height: 50%;
-		object-fit: contain;
-		z-index: 2;
-	}
-
-	#about-us {
-		overflow: clip;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
 
 	#about-us > h1 {
-		color: #FFED68;
-		text-align: center;
-		letter-spacing: 0px;
-		font: normal normal 800 120px/20px Dosis;
 		text-shadow: 0px 0px 10px #FFDF14D4;
-		padding-top: 20vh;
-		opacity: 1;
-		line-height: 1;
-	}
-
-	#about-us > p {
-		width: 55%;
-		margin-top: 5vh;
-	}
-	#top-campaigns {
-		margin-top: 30vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 	}
 
 	#top-campaigns > h1 {
-		text-align: center;
-		font: normal normal 800 80px/20px Dosis;
-		letter-spacing: 0px;
-		color: #FFED68;
 		text-shadow: 0px 0px 10px #FFDF14D4;
-		opacity: 1;
-		line-height: 1;
-		margin-bottom: 5vh;
-	}
-
-	#top-campaigns > button {
-		text-align: center;
-		font: normal normal bold 35px/20px Quicksand;
-		letter-spacing: 0px;
-		color: #FFFFFF;
-		line-height: 1;
-		padding: 2rem 4rem;
-		opacity: 1;
-		background: #372B59 0% 0% no-repeat padding-box;
-		border-radius: 51px;
-		opacity: 1;
-	}
-	
-	#campaigns {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 5vh;
-	}
-
-	#campaigns > div {
-		height: 30vw;
-		width: 30vw;
-		background: #FFFFFF 0% 0% no-repeat padding-box;
-		box-shadow: inset 0px 3px 6px #00000029;
-		border: 10px solid #FFED68;
-		border-radius: 2rem;
-		opacity: 1;
-		margin: 0 2rem;
-	}
-
-	#our-games {
-		margin-top: 10vh;
-		background-color: #372B59;
-		padding: 5vh 0;
-	}
-
-	#our-games > h1 {
-		text-align: center;
-		font: normal normal 800 120px/20px Dosis;
-		letter-spacing: 0px;
-		color: #FFFFFF;
-		opacity: 1;
-		line-height: 1;
-	}
-
-	#game-preview-main-wrapper {
-		margin-top: 5vh;
-		display: flex;
-		height: 20%;
-		justify-content: center;
-		position: relative;
-		border-radius: 2rem;
-		overflow: hidden;
-	}
-
-	#game-preview-main{
-		height: %;
-		background-color: wheat;
-		border-radius: inherit;
-		overflow: inherit;
-		width: 75%;
-	}
-
-	#preview-main-image {
-		height: 100%;
-		width: 100%;
-		object-fit: fill;
-	}
-
-	#preview-data {
-		padding: 2rem;
-		display: flex;
-		background-color: black;
-		border-bottom-left-radius: inherit;
-		border-bottom-right-radius: inherit;
-		overflow: inherit;
-		opacity: 0.8;
-		position: absolute;
-		bottom: 0;
-		width: inherit;
-		justify-content: space-between;
-	}
-
-	#preview-description {
-		width: 80%;
 	}
 
 	#preview-description > h1{
