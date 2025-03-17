@@ -6,27 +6,39 @@ import "@fontsource/dosis";
 
 import Image from "astro/components/Image.astro";
 
-import lantern from "../images/lantern.png"
-import lanternRight from "../svg/lanterns-right.svg"
 import glow from "../images/glow.png"
-import mainBackground from "../images/streetlight-main-background.png"
-import streetlightMainTitle from "../svg/streetlight-studio-main-title.svg";
+import lantern from "../images/lantern.png"
 import previewOne from "../images/preview-1.jpg";
+import mainBackground from "../images/streetlight-main-background.png"
+import campaignPreview from "../images/campaign_preview.png"
+import streelightLogo from "../images/streetlight-logo.png"
+
+import characterConcept from "../images/concept_art/character_concept.webp"
+import modelConcept from "../images/concept_art/model_concept.png"
+import gameplayConcept from "../images/concept_art/gameplay_concept.png"
+
+import chrisImg from "../images/team/Chris.jpg"
+import brookeImg from "../images/team/Brooke.jpg"
+import jessiImg from "../images/team/Jessi.jpg"
+import seanImg from "../images/team/Sean.jpg"
+
+import lanternRight from "../svg/lanterns-right.svg"
+import streetlightMainTitle from "../svg/streetlight-studio-main-title.svg";
+import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.svg";
 ---
 
 <!-- TODO: Refactor code into seperate components for each section -->
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Streetlight Studios</title>
-		<link rel="icon" href="public/lanna-lanterns.svg" type="image/svg+xml" />
+		<link rel="icon" href="public/streetlight-logo.png" type="image/png" />
 		
 	</head>
 	<body class="relative text-white bg-[#24152A] font-quicksand w-screen overflow-x-hidden select-none">
-		<nav class="absolute top-0 bg-[#24152AE3] font-[Raleway] font-medium text-[23px] leading-[27px] opacity-80 h-[80px] w-full z-[100]"
+		<nav class="hidden absolute top-0 bg-[#24152AE3] font-[Raleway] font-medium text-[23px] leading-[27px] opacity-80 h-[80px] w-full z-[100]"
 		>
 			<ul class="flex justify-center items-center h-full">
 				<li class="flex items-center h-full px-12 select-none cursor-pointer hover:bg-gray-800">
@@ -46,92 +58,288 @@ import previewOne from "../images/preview-1.jpg";
 				</li>
 			</ul>
 		</nav>
-		<Image src={mainBackground} alt="" class="absolute top-0 right-0 w-full z-1 object-cover object-[0%_20%]"/>
-		<Image src={lanternRight} alt="Lantern 1" class="absolute w-1/2 top-[30%] right-0 object-contain z-1"/>
-		<Image src={lantern} alt="Lantern 2" class="absolute z-3 w-[40%] top-[45%] left-[-18%] object-contain"/>
-		<Image src={glow} alt="Glow 2" class="absolute z-2 w-1/2 top-[45%] left-[-25%] object-contain"/>
 
-		<section class="h-screen relative flex flex-col items-center justify-center overflow-visible">
-			<Image src={streetlightMainTitle} alt="Streetlight Studios" class="block text-center h-1/2 object-contain z-2"/>
+		<Image src={mainBackground} alt="" class="absolute top-0 right-0 w-full z-1 object-cover object-[0%_20%]"/>
+		<Image src={lanternRight} alt="Lantern 1" class="absolute w-1/2 top-[20%] right-0 object-contain z-1"/>
+		<Image src={lantern} alt="Lantern 2" class="absolute z-[-1] w-[30%] top-[35%] left-[-18%] object-contain"/>
+		<Image src={glow} alt="Glow 2" class="absolute z-[-1] w-1/2 top-[35%] left-[-25%] object-contain"/>
+
+		<section class="lg:h-screen md:h-[50vh] relative flex flex-col items-center justify-center overflow-visible">
+			<Image src={streetlightMainTitle} alt="Streetlight Studios" class="hidden lg:block text-center object-contain z-2"/>
+			<Image src={streetlightMainTitleMobile} alt="Streetlight Studios" class="block lg:hidden text-center object-contain z-2"/>
 			<p>
 				Streetlights guide you the way home. 
 			</p>
 		</section>
 		<!-- ABOUT US -->
-		<section id="about-us" class="overflow-clip flex flex-col items-center justify-center">
-			<h1 class="text-[#FFED68] text-center tracking-normal font-[Dosis] font-extrabold text-[120px] leading-[1] pt-[20vh] opacity-100">
+		<section id="about-us" class="w-full overflow-clip flex flex-col items-center justify-center">
+			<h1 class="text-[#FFED68] text-center tracking-normal font-[Dosis] font-extrabold text-[36px] md:text-[80px] lg:text-[120px] leading-[1] pt-[20vh] opacity-100">
 				ABOUT US
 			</h1>
-			<p class="w-[80%] mt-[5vh]">
+			<p class="w-[100%] mt-[5vh]">
 				Streetlight Studio's team is built of 18 employees with diverse backgrounds, all of which have decades worth of development experience in entertainment and technology. from our emmy award winning producers, to our developers with decades of programming and development, we've come together to disrupt the games and entertainment industry. by providing an agile footprint with cost-effective measures, we can circumvent the massive overspending that has plagued the games industry and bring the dreams of clients to life. streetlight studios is proudly owned entirely by people of color.
 			</p>
 		</section>
 		<!-- TOP CAMPAIGNS -->
 		<section id="top-campaigns" class="mt-[30vh] flex flex-col items-center justify-center">
-			<h1 class="text-center font-[Dosis] font-extrabold text-[80px] leading-[1] tracking-normal text-[#FFED68] opacity-100 mb-[5vh]">TOP CAMPAIGNS</h1>
-			<div id="campaigns" class="flex justify-between mb-[5vh]">
-				<div class="h-[30vw] w-[30vw] bg-white shadow-[inset_0px_3px_6px_#00000029] border-[10px] border-[#FFED68] rounded-[2rem] opacity-100 mx-8"/>
-				<div class="h-[30vw] w-[30vw] bg-white shadow-[inset_0px_3px_6px_#00000029] border-[10px] border-[#FFED68] rounded-[2rem] opacity-100 mx-8"/>
+			
+			<h1 class="text-[#FFED68] text-center tracking-normal font-[Dosis] font-extrabold text-[36px] md:text-[80px] lg:text-[120px] leading-[1] pt-[20vh] opacity-100 mb-10">CAMPAIGN</h1>
+			<div id="campaigns" class="flex flex-col gap-y-8 2xl:flex-row 2xl:gap-y-0 justify-between items-center mb-[5vh] w-4/5">
+				<Image src={campaignPreview} alt="Streetlight Studios" class="bg-white shadow-[inset_0px_3px_6px_#00000029] border-[10px] border-[#FFED68] rounded-[2rem] opacity-100 mx-8"/>
+				<div id="campaign-desc" class="!w-fit flex flex-col gap-y-8">
+					<p>Calling all adventurers! Streetlight Studio has just unveiled their upcoming project, and it’s set to take the roleplaying game world by storm. Moondrift Memory, a new CRPG utilizing the Pathfinder Second Edition System, is officially in development and it’s bringing some serious star power along for the journey. Powered by the new cuttingedge Starstone Engine, this game isn’t just for Pathfinder veterans—it’s for everyone who’s ever dreamed of forging their own legendary tale. The first chapter of the game, MoondriftMemory: Prologue, is launching on Kickstarter on March 18, 2025!</p>
+					<p>Joining the talented team is legendary voice actor Sean Schemmel (Dragon Ball Z, Dragon Ball Daima, Pokémon). Schemmel is bringing his expertise to the project as both talent and Voice Director. Voice Actor Alejandra Reynoso (Pokemon Horizons, Casltevania, Winx Club) brings her talent as a voice actor onto the team. Pathfinder legend Tan Shao Han (Pathfinder: Secrets of Magic, Pathfinder: Rival Academies, Pathfinder: Impossible Lands, Pathfinder Adventure Path: Let the Leaves Fall) has joined the writing team as well, crafting an unforgettable narrative for the game. Streetlight Studio has more exciting talent attached to the project and will be announcing them in March during their campaign launch.</p>
+					<p>Designed as a top-down isometric CRPG, Moondrift Memory is an immersive experience tailored for both die-hard Pathfinder fans and those just beginning their tabletop journey. Players will lead a party of up to four adventurers through the dark, frigid valley of Moondrift, venturing deep into the ruins of a dragon’s lair. This introductory chapter masterfully teaches the core mechanics of Pathfinder Second Edition, covering combat, exploration, downtime, and social encounters—one thrilling moment at a time.</p>
+				</div>
 			</div>
-			<button class="text-center font-[Quicksand] font-bold text-[35px]  tracking-normal text-white leading-[1] px-16 py-8 bg-[#372B59] rounded-[51px] opacity-100">
+			<a href="https://www.kickstarter.com/projects/streetlightstudio/moondrift-memory-prologue?total_hits=903&category_id=35" class="text-center font-[Quicksand] font-bold text-[35px] cursor-pointer hover:bg-white hover:text-black tracking-normal text-white px-12 py-6 bg-[#372B59] rounded-[51px] opacity-100">
 				Learn More
-			</button>
+			</a>
 		</section>
 		<!-- OUR GAMES -->
 		<section id="our-games" class="mt-[10vh] bg-[#372B59] py-[5vh]">
-			<h1 class="text-center font-[Dosis] font-extrabold text-[120px] tracking-normal text-white opacity-100 leading-[1]">COMING SOON</h1>
+			<h1 class="text-center font-[Dosis] font-extrabold text-[36px] md:text-[80px] lg:text-[120px] tracking-normal text-white opacity-100 leading-[1]">COMING SOON</h1>
 			<div class="mt-[5vh] flex h-[20%] justify-center relative rounded-[2rem] overflow-hidden">
 				<div class="h-full rounded-[inherit] overflow-hidden w-[75%]">
 					<Image src={previewOne} alt="Main Preview" class="h-full w-full object-fill"/>
-					<div class="p-8 flex bg-black rounded-bl-inherit rounded-b-[2rem] overflow-hidden opacity-80 absolute bottom-0 w-[75%] justify-between">
+					<div class="p-8 flex bg-black rounded-bl-inherit rounded-b-[2rem] overflow-hidden opacity-80 absolute bottom-0 w-[75%] justify-between items-center">
 						<div id="preview-description">
-							<h1>Moondrift Memory: Prologue</h1>
-							<p>The Lillywall Guild has finally gotten their big break and has assigned you to guard a small artisan caravan that will carve the corpse of a dragon that lost a great battle with a powerful group of companions. But the battle has unearthed a ruin within the mountains. Come find what adventure lurks beneath.</p>
+							<h1 class="!text-[20px] md:!text-[26px] lg:!text-[40px] xl:!text-[72--px]">Moondrift Memory: Prologue</h1>
+							<p class="!tracking-normal !hidden !text-[10px] md:!block md:!text-[16px] lg:!text-[22px] !w-full xl:!w-2/3 xl:mt-6">The Lillywall Guild has finally gotten their big break and has assigned you to guard a small artisan caravan that will carve the corpse of a dragon that lost a great battle with a powerful group of companions. But the battle has unearthed a ruin within the mountains. Come find what adventure lurks beneath.</p>
 						</div>
-						<button>Watch</button>
+						<a href="https://www.kickstarter.com/projects/streetlightstudio/moondrift-memory-prologue?total_hits=903&category_id=35" class="border-4 cursor-pointer hover:bg-white hover:text-black border-white h-fit text-[10px] xl:text-[20px] px-12 py-4 rounded-full">
+							Watch
+						</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<footer class="flex w-full flex-row justify-center">
-			<div>Test</div>
-			<div>
-				<h1 class="font-extrabold text-[60px] leading-[20px] text-[#F8D06D] opacity-100">Streelight Studio</h1>
-				<ul>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Campaign</a></li>
-					<li><a href="#">Games</a></li>
-					<li><a href="#">Concept Art</a></li>
-					<li><a href="#">Team</a></li>
-				</ul>
-			</div>
-			<!-- <div class="flex-grow">
-				<h1 class="font-extrabold text-[60px] leading-[20px] text-[#F8D06D] opacity-100">Streelight Studio</h1>
-				<ul>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Campaign</a></li>
-					<li><a href="#">Games</a></li>
-					<li><a href="#">Concept Art</a></li>
-					<li><a href="#">Team</a></li>
-				</ul>
-			</div> -->
-			<div>Test</div>
-		</footer>
-		<!-- <footer class="flex justify-center w-full font-[Dosis]">
-			<div></div>
-			<div class="!w-fit">
-				<h1 class="!w-fit font-extrabold text-[60px] leading-[20px] text-[#F8D06D] opacity-100">Join the community</h1>
-				<p class="!text-left">
-					Lorem ipsum dolor sit amet. Est laboriosam perferendis id ducimus perferendis nam maiores voluptatem ut deserunt corrupti et provident neque id velit recusandae!
-				</p>
-				<div class="!w-fit flex gap-x-2">
-					<div class="rounded-full bg-amber-200 h-14 aspect-square "/>
-					<div class="rounded-full bg-amber-200 h-14 aspect-square "/>
-					<div class="rounded-full bg-amber-200 h-14 aspect-square "/>
-					<div class="rounded-full bg-amber-200 h-14 aspect-square "/>
+		<!-- CONCEPT ART -->
+		 <section id="concept-art" class="flex flex-col items-center">
+			<h1 class="text-[#FFED68] text-center tracking-normal font-[Dosis] font-extrabold text-[36px] md:text-[80px] lg:text-[120px] leading-[1] pt-[20vh] opacity-100 mb-10">CONCEPT ART</h1>
+			<div class="relative mb-8">
+				<div class="absolute flex justify-center z-[-1]">
+					<!-- <Image src={glow} alt="Glow 3" class="object-contain w-auto "/>
+					<Image src={glow} alt="Glow 4" class="object-contain w-auto "/>
+					<Image src={glow} alt="Glow 5" class="object-contain w-auto "/> -->
+				</div>
+				<div id="concept-art-blocks" class="z-20 flex justify-center gap-x-4">
+					<div class="w-[25vw] bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
+						<Image src={characterConcept} alt="Characters" class="z-10 object-cover h-[20vw] rounded-2xl mb-8"/>
+						 <h1 class="m-auto w-fit">Characters</h1>
+					</div>
+					<div class="w-[25vw] bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
+						<Image src={modelConcept} alt="Characters" class="z-10 object-cover h-[20vw] rounded-2xl mb-8"/>
+						 <h1 class="m-auto w-fit">Model</h1>
+					</div>
+					<div class="w-[25vw] bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
+						<Image src={gameplayConcept} alt="Characters" class="z-10 object-cover h-[20vw] rounded-2xl mb-8"/>
+						 <h1 class="m-auto w-fit">Gameplay</h1>
+					</div>
 				</div>
 			</div>
-		</footer> -->
+			
+			<a href="https://www.kickstarter.com/projects/streetlightstudio/moondrift-memory-prologue?total_hits=903&category_id=35" class="w-fit !h-fit text-center font-[Quicksand] font-bold text-[35px] cursor-pointer hover:bg-white hover:text-black tracking-normal text-white px-12 py-6 bg-[#372B59] rounded-[51px] opacity-100">
+				See More
+			</a>
+		 </section>
+		<!-- MEET THE TEAM -->
+		 <section id="meet-the-team" class="my-40">
+			<h1 class="!text-[#FFED68] text-center tracking-normal font-[Dosis] font-extrabold !text-[40px] md:!text-[80px] lg:!text-[120px] leading-[1] opacity-100 w-[80%] m-auto">
+				MEET THE TEAM
+			</h1>
+			<div id="team-images" class="grid grid-cols-4 justify-items-center my-8">
+				<div class="team-image-item">
+					<Image src={chrisImg} alt="Chris" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<div>
+						<h1 class="text-lg font-bold">Christopher Yang</h1>
+						<h2 class="text-sm">CEO</h2>
+					</div>
+				</div>
+				<div class="team-image-item">
+					<Image src={brookeImg} alt="Chris" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<div>
+						<h1 class="text-lg font-bold">Brooke Eyler</h1>
+						<h2 class="text-sm">Creative Director</h2>
+					</div>
+				</div>
+				<div class="team-image-item">
+					<Image src={seanImg} alt="Chris" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<div>
+						<h1 class="text-lg font-bold">Sean Schemmel</h1>
+						<h2 class="text-sm">Voice Director</h2>
+					</div>
+				</div>
+				<div class="team-image-item">
+					<Image src={jessiImg} alt="Chris" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<div>
+						<h1 class="text-lg font-bold">Jessi Wills</h1>
+						<h2 class="text-sm">Executive Producer</h2>
+					</div>
+				</div>
+			</div>
+			<div>
+				<ul class="w-4/5 grid grid-cols-6 gap-4 justify-items-center m-auto">
+					<li>
+					  <h1 class="text-lg font-bold">Celine (Ciel) Castro</h1>
+					  <h2 class="text-sm">Lead Technical Artist</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">Jasmine (Xion) Gallaron</h1>
+					  <h2 class="text-sm">Lead Unity Development and Programmer</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">Marvi (Luna) Fetiluna</h1>
+					  <h2 class="text-sm">Lead Unity Development and Programmer</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">Tobius (Toby.exe) Trangar</h1>
+					  <h2 class="text-sm">Lead Concept Artist</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">François (Elfteiroh) Potvin Naud</h1>
+					  <h2 class="text-sm">Tools and Data Structure Programmer</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">Kegan Nienstedt</h1>
+					  <h2 class="text-sm">Technical Consultant</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">Fae (Maqi) Narayan</h1>
+					  <h2 class="text-sm">Illustrator</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">Tan Shao Han</h1>
+					  <h2 class="text-sm">Staff Writer</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">Syra Mahor</h1>
+					  <h2 class="text-sm">Illustrator</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">Alejandro Reynoso</h1>
+					  <h2 class="text-sm">Voice Actor</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">Jon Matteson</h1>
+					  <h2 class="text-sm">Voice Actor</h2>
+					</li>
+					<li>
+					  <h1 class="text-lg font-bold">Tory Renee Hatcher</h1>
+					  <h2 class="text-sm">Voice Actor</h2>
+					</li>
+					<li class="!col-span-3">
+					  <h1 class="text-lg font-bold">Saverio (Sav) Di Francesco</h1>
+					  <h2 class="text-sm">3D Artist</h2>
+					</li>
+					<li class="!col-span-3">
+					  <h1 class="text-lg font-bold">Patricia Marie Leyva</h1>
+					  <h2 class="text-sm">3D Artist</h2>
+					</li>
+				</ul>
+			</div>
+		 </section>
+		 <!-- Contact us! -->
+		  <section id="newsletter" class="bg-[#F1F1F1] text-[#372B59] flex gap-x-4 justify-center py-20 px-30">
+			<div>
+				<h1>Want more?</h1>
+				<h2>Signup for our Newsletter to get the latest news in your inbox.</h2>
+			</div>
+			<div class="w-3/5 flex items-center">
+				<input type="email" placeholder="Enter email" class="bg-[#FFFFFF] border border-white/10 rounded-xl p-2 w-full text-black placeholder-[#F1F1F1] text-[24px] focus:outline-none focus:border-black transition"/>
+			</div>
+			<div class="flex items-center">
+				<button class="text-center !h-fit font-[Quicksand] font-bold text-[20px] cursor-pointer hover:bg-white hover:text-black tracking-normal text-white px-8 py-4 bg-[#372B59] rounded-4xl opacity-100">
+					Subscribe
+				</button>
+			</div>
+		  </section>
+		  <!-- Footer -->
+		   <footer class="bg-[#ACC6F5] text-[#372B59] flex w-full justify-center gap-x-14">
+			<Image src={streelightLogo} alt="Chris" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+			<div class="h-1/2 mt-10">
+				<h1 class="text-[60px]">Streetlight Studio</h1>
+				<ul class="mt-4">
+					<li>
+						<a href="#about-us">
+							About Us
+						</a>
+					</li>
+					<li>
+						<a href="#top-campaigns">
+							Campaign
+						</a>
+					</li>
+					<li>
+						<a href="#our-games">
+							Games
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Contact Us
+						</a>
+					</li>
+					<li>
+						<a href="#meet-the-team">
+							The Team
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="w-1/3 mt-10">
+				<h1 class="text-[60px]">Join the Community</h1>
+				<p class="mt-4">
+					Lorem ipsum dolor sit amet. Est laboriosam perferendis id ducimus perferendis nam maiores voluptatem ut deserunt corrupti et provident neque id velit recusandae!
+				</p>
+				<div class="flex gap-x-2 mt-4">
+					<!-- Instagram -->
+					<a href="https://www.instagram.com/streetlightstudios?igsh=MzRlODBiNWFlZA==" class="[&>svg]:h-8 [&>svg]:w-8 rounded-full !text-white bg-[#d62976] p-2">
+					  <svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="currentColor"
+							viewBox="0 0 448 512"
+						>
+						<path
+						  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+					  </svg>
+					</a>
+					<!-- Youtube -->
+					<a href="https://m.youtube.com/@StreetlightStudioOfficial" class="[&>svg]:h-8 [&>svg]:w-8 rounded-full !text-white bg-[#FF0000] p-2">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="currentColor"
+							viewBox="0 0 576 512"
+						>
+						<path
+							d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+						</svg>
+					</a>
+					<!-- Tiktok -->
+					<a class="[&>svg]:h-8 [&>svg]:w-8 rounded-full !text-white bg-[#000000] p-2">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="currentColor"
+							viewBox="0 0 448 512"
+						  >
+						  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+						  <path
+							d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+						</svg>
+					</a>
+					<!-- Bluesky -->
+					<a href="#" class="[&>svg]:h-8 [&>svg]:w-8 rounded-full !text-white bg-[#0085FF] p-2">
+						<svg 
+							xmlns="http://www.w3.org/2000/svg" 
+							fill="currentColor"
+							viewBox="0 0 512 512"
+						>
+							<path d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		   </footer>
 	</body>
 </html>
 
@@ -142,8 +350,17 @@ import previewOne from "../images/preview-1.jpg";
 		font: normal normal bold 25px/29px Quicksand;
 		letter-spacing: 0px;
 		opacity: 1;
-		width: 30%;
+		width: 70%;
 		z-index: 2;
+	}
+
+	#campaign-desc > p {
+		text-align: left;
+		font: normal normal normal 20px/25px Quicksand;
+		letter-spacing: 0.08px;
+		width: 100%;
+		color: #FFFFFF;
+		opacity: 1;
 	}
 
 	#about-us > h1 {
@@ -167,10 +384,120 @@ import previewOne from "../images/preview-1.jpg";
 	#preview-description > p {
 		text-align: left;
 		font: normal normal normal 15px/20px Quicksand;
-		letter-spacing: 0px;
 		width: 100%;
 		color: #DFDEDE;
 		opacity: 1;
+	} 
+
+	#concept-art-blocks h1 {
+		font: normal normal bold 10px/20px Quicksand;
+		@media (width >= 350px) {
+			font-size: 30px;
+    	}
+	}
+
+	#concept-art > h1 {
+		text-shadow: 0px 0px 10px #FFDF14D4;
+	}
+
+	#meet-the-team > h1 {
+		text-shadow: 0px 0px 10px #FFDF14D4;
+	}
+
+	#team-images > .team-image-item {
+		grid-column: span 2;
+		margin-bottom: 2rem;
+		width: 10rem;
+		@media (width >= 860px) {
+			grid-column: span 1;
+			font-size: 20px;
+			width: 12rem;
+    	}
+		@media (width >= 1400px) {
+			grid-column: span 1;
+			font-size: 20px;
+			width: 16rem;
+    	}
+		@media (width >= 1920px) {
+			grid-column: span 1;
+			font-size: 20px;
+			width: 24rem;
+    	}
+	}
+
+	#meet-the-team li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		grid-column: span 3;
+		width: fit-content;
+		margin-bottom: 1rem;
+		@media (width >= 64rem ) {
+			grid-column: span 2;
+    	}
+	}
+
+	#meet-the-team h1 {
+		text-align: center;
+		font: normal normal 800 16px Dosis;
+		color: #ACC6F5;
+		opacity: 1;
+		@media (width >= 64rem) {
+			grid-column: span 2;
+			font-size: 35px;
+    	}
+	}
+
+	#meet-the-team h2 {
+		text-align: center;
+		font: normal normal bold 10px Quicksand;
+		color: #FFFFFF;
+		opacity: 1;
+		@media (width >= 64rem) {
+			grid-column: span 2;
+			font-size: 20px;
+    	}
+	}
+
+	#newsletter h1 {
+		font: normal normal 800 120px Dosis;
+		color: #372B59;
+	}
+
+	#newsletter h2 {
+		text-align: left;
+		font: normal normal bold 35px Quicksand;
+		letter-spacing: 0px;
+		color: #372B59;
+		opacity: 1;
+	}
+
+	footer h1 {
+		font: normal normal 800 60px Dosis;
+	}
+
+	footer p {
+		text-align: left;
+		font: normal normal normal 25px Quicksand;
+		letter-spacing: 0px;
+		color: #24152A;
+		opacity: 1;
+	}
+
+	footer a {
+		text-align: left;
+		font: normal normal bold 25px Quicksand;
+		letter-spacing: 0px;
+		color: #24152A;
+		opacity: 1;
+	}
+
+	footer a:hover {
+		color: #372B59
+	}
+
+	footer li {
+		margin-top: 0.3rem;
 	}
 
 </style>
