@@ -7,6 +7,7 @@ import "@fontsource/dosis";
 import Image from "astro/components/Image.astro";
 
 import glow from "../images/glow.png"
+import glowConceptArt from "../svg/glow-concept-art.svg"
 import lantern from "../images/lantern.png"
 import previewOne from "../images/Pathfinder_KeyArt.png";
 import mainBackground from "../images/streetlight-main-background.png"
@@ -24,7 +25,6 @@ import seanImg from "../images/team/Sean.jpg"
 
 import lanternRight from "../svg/lanterns-right.svg"
 import streetlightMainTitle from "../svg/streetlight-studio-main-title.svg";
-import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.svg";
 ---
 
 <!-- TODO: Refactor code into seperate components for each section -->
@@ -114,14 +114,10 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 			</div>
 		</section>
 		<!-- CONCEPT ART -->
-		 <section id="concept-art" class="flex flex-col items-center w-screen">
+		 <section id="concept-art" class="relative flex flex-col items-center w-screen">
 			<h1 class="text-[#FFED68] text-center tracking-normal font-[Dosis] font-extrabold text-[36px] md:text-[80px] lg:text-[120px] leading-[1] pt-[20vh] opacity-100 mb-10">CONCEPT ART</h1>
-			<div class="relative mb-8 w-full overflow-x-hidden">
-				<div class="absolute flex justify-center z-[-1]">
-					<!-- <Image src={glow} alt="Glow 3" class="object-contain w-auto "/>
-					<Image src={glow} alt="Glow 4" class="object-contain w-auto "/>
-					<Image src={glow} alt="Glow 5" class="object-contain w-auto "/> -->
-				</div>
+			<Image src={glowConceptArt} alt="Glow 3" class="absolute object-cover top-[8rem] object-center w-full h-full "/>
+			<div class="relative mb-8 h-auto w-full overflow-x-hidden">
 				<div id="concept-art-blocks" class="z-20 px-8 flex justify-start md:justify-center overflow-x-auto gap-x-4 [&>div]:flex-none [&>div]:w-[80vw] [&>div>img]:h-[70vw] md:[&>div>img]:h-[20vw] md:[&>div]:w-[25vw]">
 					<div class="bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
 						<Image src={characterConcept} alt="Characters" class="z-10 object-cover rounded-2xl mb-8"/>
@@ -129,7 +125,7 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 					</div>
 					<div class="bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
 						<Image src={modelConcept} alt="Characters" class="z-10 object-cover rounded-2xl mb-8"/>
-						 <h1 class="m-auto w-fit">Model</h1>
+						 <h1 class="m-auto w-fit">Models</h1>
 					</div>
 					<div class="bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
 						<Image src={gameplayConcept} alt="Characters" class="z-10 object-cover rounded-2xl mb-8"/>
@@ -149,28 +145,40 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 			</h1>
 			<div id="team-images" class="grid grid-cols-4 justify-items-center my-8">
 				<div class="team-image-item">
-					<Image src={chrisImg} alt="Chris" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<div class="relative w-full">
+						<Image src={chrisImg} alt="Chris" class="aspect-square rounded-2xl !mx-auto border-[8px] border-[#ACC6F5]"/>
+						<div class="absolute flex bg-[#ACC6F5] h-3/5 top-[50%] transform -translate-y-1/2 w-full z-[-10]"/>
+					</div>
 					<div>
 						<h1 class="text-lg font-bold">Christopher Yang</h1>
 						<h2 class="text-sm">CEO</h2>
 					</div>
 				</div>
 				<div class="team-image-item">
-					<Image src={brookeImg} alt="Brooke" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<div class="relative w-full">
+						<Image src={brookeImg} alt="Brooke" class="aspect-square object-cover rounded-2xl !mx-auto border-[8px] border-[#ACC6F5]"/>
+						<div class="absolute flex bg-[#ACC6F5] h-3/5 top-[50%] transform -translate-y-1/2 w-full z-[-10]"/>
+					</div>
 					<div>
 						<h1 class="text-lg font-bold">Brooke Eyler</h1>
 						<h2 class="text-sm">Creative Director</h2>
 					</div>
 				</div>
 				<div class="team-image-item">
-					<Image src={seanImg} alt="Sean" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<div class="relative w-full">
+						<Image src={seanImg} alt="Sean" class="aspect-square rounded-2xl !mx-auto border-[8px] border-[#ACC6F5]"/>
+						<div class="absolute flex bg-[#ACC6F5] h-3/5 top-[50%] transform -translate-y-1/2 w-full z-[-10]"/>
+					</div>
 					<div>
 						<h1 class="text-lg font-bold">Sean Schemmel</h1>
 						<h2 class="text-sm">Voice Director</h2>
 					</div>
 				</div>
 				<div class="team-image-item">
-					<Image src={jessiImg} alt="Jessi" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<div class="relative w-full">
+						<Image src={jessiImg} alt="Jessi" class="aspect-square rounded-2xl !mx-auto border-[8px] border-[#ACC6F5]"/>
+						<div class="absolute flex bg-[#ACC6F5] h-3/5 top-[50%] transform -translate-y-1/2 w-full z-[-10]"/>
+					</div>
 					<div>
 						<h1 class="text-lg font-bold">Jessi Wills</h1>
 						<h2 class="text-sm">Executive Producer</h2>
@@ -228,7 +236,7 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 			</div>
 		 </section>
 		 <!-- Contact us! -->
-		  <section id="newsletter" class="bg-[#F1F1F1] text-[#372B59] flex flex-col xl:flex-row gap-x-4 gap-y-8 ustify-center py-4 px-6 md:py-20 md:px-30">
+		  <!-- <section id="newsletter" class="bg-[#F1F1F1] text-[#372B59] flex flex-col xl:flex-row gap-x-4 gap-y-8 ustify-center py-4 px-6 md:py-20 md:px-30">
 			<div class="xl:max-w-1/2">
 				<h1>Want more?</h1>
 				<h2>Signup for our Newsletter to get the latest news in your inbox.</h2>
@@ -243,7 +251,7 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 					</button>
 				</div>
 			</div>
-		  </section>
+		  </section> -->
 		  <!-- Footer -->
 		   <footer class="bg-[#ACC6F5] text-[#372B59] flex flex-col lg:flex-row w-full items-center lg:items-start justify-center gap-x-14">
 			<Image src={streelightLogo} alt="Footer Logo" class="hidden lg:block aspect-square rounded-2xl w-80  border-[8px] border-[#ACC6F5]"/>
@@ -405,27 +413,39 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 		text-shadow: 0px 0px 10px #FFDF14D4;
 	}
 
-	#team-images > .team-image-item {
+	.team-image-item {
 		grid-column: span 2;
 		margin-bottom: 2rem;
+		width: 100%;
+
+		@media (width >= 860px) {
+			grid-column: span 1;
+			font-size: 20px;
+    	}
+		@media (width >= 1280px) {
+			grid-column: span 1;
+			font-size: 20px;
+    	}
+		@media (width >= 1920px) {
+			grid-column: span 1;
+			font-size: 20px;
+    	}
+	}
+
+	.team-image-item img {
+		margin-bottom: 0.5rem;
 		width: 10em;
 
 		@media (width >= 28rem) {
 			width: 14em;
 		}
 		@media (width >= 860px) {
-			grid-column: span 1;
-			font-size: 20px;
 			width: 12rem;
     	}
 		@media (width >= 1280px) {
-			grid-column: span 1;
-			font-size: 20px;
 			width: 16rem;
     	}
 		@media (width >= 1920px) {
-			grid-column: span 1;
-			font-size: 20px;
 			width: 24rem;
     	}
 	}
