@@ -60,13 +60,12 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 		</nav>
 
 		<Image src={mainBackground} alt="" class="absolute top-0 right-0 w-full z-1 object-cover object-[0%_20%]"/>
-		<Image src={lanternRight} alt="Lantern 1" class="absolute w-1/2 top-[20%] right-0 object-contain z-1"/>
-		<Image src={lantern} alt="Lantern 2" class="absolute z-[-1] w-[30%] top-[35%] left-[-18%] object-contain"/>
-		<Image src={glow} alt="Glow 2" class="absolute z-[-1] w-1/2 top-[35%] left-[-25%] object-contain"/>
+		<Image src={lanternRight} alt="Lantern 1" class="absolute w-1/2 top-[13%] right-0 object-contain z-1"/>
+		<Image src={lantern} alt="Lantern 2" class="absolute z-[-1] w-[50vw] top-[29%] left-[-17%] object-contain"/>
+		<Image src={glow} alt="Glow 2" class="absolute z-[-2] w-[60vw] top-[29%] left-[-25%] object-contain"/>
 
-		<section class="lg:h-screen md:h-[50vh] relative flex flex-col items-center justify-center overflow-visible">
-			<Image src={streetlightMainTitle} alt="Streetlight Studios" class="hidden lg:block text-center object-contain z-2"/>
-			<Image src={streetlightMainTitleMobile} alt="Streetlight Studios" class="block lg:hidden text-center object-contain z-2"/>
+		<section class="md:h-screen relative flex flex-col items-center md:justify-center justify-start overflow-visible">
+			<Image src={streetlightMainTitle} alt="Streetlight Studios" class="px-8 text-center object-contain z-2"/>
 			<p>
 				Streetlights guide you the way home. 
 			</p>
@@ -81,7 +80,7 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 			</p>
 		</section>
 		<!-- TOP CAMPAIGNS -->
-		<section id="top-campaigns" class="mt-[30vh] flex flex-col items-center justify-center">
+		<section id="top-campaigns" class="mt-10 flex flex-col items-center justify-center">
 			
 			<h1 class="text-[#FFED68] text-center tracking-normal font-[Dosis] font-extrabold text-[36px] md:text-[80px] lg:text-[120px] leading-[1] pt-[20vh] opacity-100 mb-10">CAMPAIGN</h1>
 			<div id="campaigns" class="flex flex-col gap-y-8 2xl:flex-row 2xl:gap-y-0 justify-between items-center mb-[5vh] w-4/5">
@@ -92,7 +91,7 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 					<p>Designed as a top-down isometric CRPG, Moondrift Memory is an immersive experience tailored for both die-hard Pathfinder fans and those just beginning their tabletop journey. Players will lead a party of up to four adventurers through the dark, frigid valley of Moondrift, venturing deep into the ruins of a dragon’s lair. This introductory chapter masterfully teaches the core mechanics of Pathfinder Second Edition, covering combat, exploration, downtime, and social encounters—one thrilling moment at a time.</p>
 				</div>
 			</div>
-			<a href="https://www.kickstarter.com/projects/streetlightstudio/moondrift-memory-prologue?total_hits=903&category_id=35" class="text-center font-[Quicksand] font-bold text-[35px] cursor-pointer hover:bg-white hover:text-black tracking-normal text-white px-12 py-6 bg-[#372B59] rounded-[51px] opacity-100">
+			<a href="https://www.kickstarter.com/projects/streetlightstudio/moondrift-memory-prologue?total_hits=903&category_id=35" class="text-center font-[Quicksand] font-bold text-[18px] md:text-[35px] cursor-pointer hover:bg-white hover:text-black tracking-normal text-white px-12 py-6 bg-[#372B59] rounded-[51px] opacity-100">
 				Learn More
 			</a>
 		</section>
@@ -102,12 +101,12 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 			<div class="mt-[5vh] flex h-[20%] justify-center relative rounded-[2rem] overflow-hidden">
 				<div class="h-full rounded-[inherit] overflow-hidden w-[75%]">
 					<Image src={previewOne} alt="Main Preview" class="h-full w-full object-fill"/>
-					<div class="p-8 flex bg-black rounded-bl-inherit rounded-b-[2rem] overflow-hidden opacity-80 absolute bottom-0 w-[75%] justify-between items-center">
+					<div class="p-4 md:p-8 flex bg-black rounded-bl-inherit rounded-b-[2rem] overflow-hidden opacity-80 absolute bottom-0 w-[75%] gap-x-4 justify-between items-center">
 						<div id="preview-description">
-							<h1 class="!text-[20px] md:!text-[26px] lg:!text-[40px] xl:!text-[72--px]">Moondrift Memory: Prologue</h1>
+							<h1 class="!text-[16px] md:!text-[26px] lg:!text-[40px] xl:!text-[72--px]">Moondrift Memory: Prologue</h1>
 							<p class="!tracking-normal !hidden !text-[10px] md:!block md:!text-[16px] lg:!text-[22px] !w-full xl:!w-2/3 xl:mt-6">The Lillywall Guild has finally gotten their big break and has assigned you to guard a small artisan caravan that will carve the corpse of a dragon that lost a great battle with a powerful group of companions. But the battle has unearthed a ruin within the mountains. Come find what adventure lurks beneath.</p>
 						</div>
-						<a href="https://www.kickstarter.com/projects/streetlightstudio/moondrift-memory-prologue?total_hits=903&category_id=35" class="border-4 cursor-pointer hover:bg-white hover:text-black border-white h-fit text-[10px] xl:text-[20px] px-12 py-4 rounded-full">
+						<a href="https://www.kickstarter.com/projects/streetlightstudio/moondrift-memory-prologue?total_hits=903&category_id=35" class="border-4 cursor-pointer hover:bg-white hover:text-black border-white h-fit text-[10px] xl:text-[20px] px-6 py-4 md:px-12 rounded-full">
 							Watch
 						</a>
 					</div>
@@ -115,31 +114,31 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 			</div>
 		</section>
 		<!-- CONCEPT ART -->
-		 <section id="concept-art" class="flex flex-col items-center">
+		 <section id="concept-art" class="flex flex-col items-center w-screen">
 			<h1 class="text-[#FFED68] text-center tracking-normal font-[Dosis] font-extrabold text-[36px] md:text-[80px] lg:text-[120px] leading-[1] pt-[20vh] opacity-100 mb-10">CONCEPT ART</h1>
-			<div class="relative mb-8">
+			<div class="relative mb-8 w-full overflow-x-hidden">
 				<div class="absolute flex justify-center z-[-1]">
 					<!-- <Image src={glow} alt="Glow 3" class="object-contain w-auto "/>
 					<Image src={glow} alt="Glow 4" class="object-contain w-auto "/>
 					<Image src={glow} alt="Glow 5" class="object-contain w-auto "/> -->
 				</div>
-				<div id="concept-art-blocks" class="z-20 flex justify-center gap-x-4">
-					<div class="w-[25vw] bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
-						<Image src={characterConcept} alt="Characters" class="z-10 object-cover h-[20vw] rounded-2xl mb-8"/>
+				<div id="concept-art-blocks" class="z-20 px-8 flex justify-start md:justify-center overflow-x-auto gap-x-4 [&>div]:flex-none [&>div]:w-[80vw] [&>div>img]:h-[70vw] md:[&>div>img]:h-[20vw] md:[&>div]:w-[25vw]">
+					<div class="bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
+						<Image src={characterConcept} alt="Characters" class="z-10 object-cover rounded-2xl mb-8"/>
 						 <h1 class="m-auto w-fit">Characters</h1>
 					</div>
-					<div class="w-[25vw] bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
-						<Image src={modelConcept} alt="Characters" class="z-10 object-cover h-[20vw] rounded-2xl mb-8"/>
+					<div class="bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
+						<Image src={modelConcept} alt="Characters" class="z-10 object-cover rounded-2xl mb-8"/>
 						 <h1 class="m-auto w-fit">Model</h1>
 					</div>
-					<div class="w-[25vw] bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
-						<Image src={gameplayConcept} alt="Characters" class="z-10 object-cover h-[20vw] rounded-2xl mb-8"/>
+					<div class="bg-[#372B59]/20 rounded-4xl py-8 px-4 backdrop-blur-lg">
+						<Image src={gameplayConcept} alt="Characters" class="z-10 object-cover rounded-2xl mb-8"/>
 						 <h1 class="m-auto w-fit">Gameplay</h1>
 					</div>
 				</div>
 			</div>
 			
-			<a href="https://www.kickstarter.com/projects/streetlightstudio/moondrift-memory-prologue?total_hits=903&category_id=35" class="w-fit !h-fit text-center font-[Quicksand] font-bold text-[35px] cursor-pointer hover:bg-white hover:text-black tracking-normal text-white px-12 py-6 bg-[#372B59] rounded-[51px] opacity-100">
+			<a href="https://www.kickstarter.com/projects/streetlightstudio/moondrift-memory-prologue?total_hits=903&category_id=35" class="text-center font-[Quicksand] font-bold text-[18px] md:text-[25px] lg:text-[35px] cursor-pointer hover:bg-white hover:text-black tracking-normal text-white px-12 py-6 bg-[#372B59] rounded-[51px] opacity-100">
 				See More
 			</a>
 		 </section>
@@ -157,21 +156,21 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 					</div>
 				</div>
 				<div class="team-image-item">
-					<Image src={brookeImg} alt="Chris" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<Image src={brookeImg} alt="Brooke" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
 					<div>
 						<h1 class="text-lg font-bold">Brooke Eyler</h1>
 						<h2 class="text-sm">Creative Director</h2>
 					</div>
 				</div>
 				<div class="team-image-item">
-					<Image src={seanImg} alt="Chris" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<Image src={seanImg} alt="Sean" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
 					<div>
 						<h1 class="text-lg font-bold">Sean Schemmel</h1>
 						<h2 class="text-sm">Voice Director</h2>
 					</div>
 				</div>
 				<div class="team-image-item">
-					<Image src={jessiImg} alt="Chris" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+					<Image src={jessiImg} alt="Jessi" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
 					<div>
 						<h1 class="text-lg font-bold">Jessi Wills</h1>
 						<h2 class="text-sm">Executive Producer</h2>
@@ -229,23 +228,25 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 			</div>
 		 </section>
 		 <!-- Contact us! -->
-		  <section id="newsletter" class="bg-[#F1F1F1] text-[#372B59] flex gap-x-4 justify-center py-20 px-30">
-			<div>
+		  <section id="newsletter" class="bg-[#F1F1F1] text-[#372B59] flex flex-col xl:flex-row gap-x-4 gap-y-8 ustify-center py-4 px-6 md:py-20 md:px-30">
+			<div class="xl:max-w-1/2">
 				<h1>Want more?</h1>
 				<h2>Signup for our Newsletter to get the latest news in your inbox.</h2>
 			</div>
-			<div class="w-3/5 flex items-center">
-				<input type="email" placeholder="Enter email" class="bg-[#FFFFFF] border border-white/10 rounded-xl p-2 w-full text-black placeholder-[#F1F1F1] text-[24px] focus:outline-none focus:border-black transition"/>
-			</div>
-			<div class="flex items-center">
-				<button class="text-center !h-fit font-[Quicksand] font-bold text-[20px] cursor-pointer hover:bg-white hover:text-black tracking-normal text-white px-8 py-4 bg-[#372B59] rounded-4xl opacity-100">
-					Subscribe
-				</button>
+			<div class="flex gap-x-8 flex-grow">
+				<div class="flex grow items-center">
+					<input type="email" placeholder="Enter email" class="bg-[#FFFFFF] flex-grow border border-white/10 rounded-xl p-2 w-full text-black placeholder-[#F1F1F1] text-[16px] md:text-[24px] focus:outline-none focus:border-black transition"/>
+				</div>
+				<div class="flex items-center">
+					<button class="text-center !h-fit font-[Quicksand] font-bold text-[12px] md:text-[20px] cursor-pointer hover:bg-white hover:text-black tracking-normal text-white px-8 py-4 bg-[#372B59] rounded-4xl opacity-100">
+						Subscribe
+					</button>
+				</div>
 			</div>
 		  </section>
 		  <!-- Footer -->
-		   <footer class="bg-[#ACC6F5] text-[#372B59] flex w-full justify-center gap-x-14">
-			<Image src={streelightLogo} alt="Chris" class="aspect-square rounded-2xl border-[8px] border-[#ACC6F5]"/>
+		   <footer class="bg-[#ACC6F5] text-[#372B59] flex flex-col lg:flex-row w-full items-center lg:items-start justify-center gap-x-14">
+			<Image src={streelightLogo} alt="Footer Logo" class="hidden lg:block aspect-square rounded-2xl w-80  border-[8px] border-[#ACC6F5]"/>
 			<div class="h-1/2 mt-10">
 				<h1 class="text-[60px]">Streetlight Studio</h1>
 				<ul class="mt-4">
@@ -276,12 +277,12 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 					</li>
 				</ul>
 			</div>
-			<div class="w-1/3 mt-10">
+			<div class="lg:w-1/3 mt-10">
 				<h1 class="text-[60px]">Join the Community</h1>
-				<p class="mt-4">
+				<p class="mt-4 !w-full">
 					Join us on Tiktok, Instagram, Bluesky, Youtube!
 				</p>
-				<div class="flex gap-x-2 mt-4">
+				<div class="flex gap-x-4 mt-4 justify-center lg:justify-start" >
 					<!-- Instagram -->
 					<a href="https://www.instagram.com/streetlightstudios?igsh=MzRlODBiNWFlZA==" class="[&>svg]:h-8 [&>svg]:w-8 rounded-full !text-white bg-[#d62976] p-2">
 					  <svg
@@ -328,6 +329,7 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 					</a>
 				</div>
 			</div>
+			<Image src={streelightLogo} alt="Footer Logo" class="lg:hidden aspect-square rounded-2xl w-80  border-[8px] border-[#ACC6F5]"/>
 		   </footer>
 	</body>
 </html>
@@ -336,20 +338,29 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 
 	p {
 		text-align: center;
-		font: normal normal bold 25px/29px Quicksand;
+		font: normal normal bold 18px Quicksand;
 		letter-spacing: 0px;
 		opacity: 1;
 		width: 70%;
 		z-index: 2;
+
+		@media (width >= 40rem) {
+			font-size: 25px;
+    	}
 	}
 
 	#campaign-desc > p {
-		text-align: left;
-		font: normal normal normal 20px/25px Quicksand;
+		text-align: center;
+		font: normal normal normal 18px Quicksand;
 		letter-spacing: 0.08px;
 		width: 100%;
 		color: #FFFFFF;
 		opacity: 1;
+
+		@media (width >= 40rem) {
+			text-align: left;
+			font-size: 25px;
+    	}
 	}
 
 	#about-us > h1 {
@@ -362,6 +373,7 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 
 	#preview-description > h1{
 		text-align: left;
+		margin-bottom: 0.5rem;
 		font: normal normal bold 70px/20px Dosis;
 		letter-spacing: 0px;
 		color: #FFFFFF;
@@ -379,7 +391,7 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 	} 
 
 	#concept-art-blocks h1 {
-		font: normal normal bold 10px/20px Quicksand;
+		font: normal normal bold 26px Quicksand !important;
 		@media (width >= 350px) {
 			font-size: 30px;
     	}
@@ -396,13 +408,17 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 	#team-images > .team-image-item {
 		grid-column: span 2;
 		margin-bottom: 2rem;
-		width: 10rem;
+		width: 10em;
+
+		@media (width >= 28rem) {
+			width: 14em;
+		}
 		@media (width >= 860px) {
 			grid-column: span 1;
 			font-size: 20px;
 			width: 12rem;
     	}
-		@media (width >= 1400px) {
+		@media (width >= 1280px) {
 			grid-column: span 1;
 			font-size: 20px;
 			width: 16rem;
@@ -431,6 +447,10 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 		font: normal normal 800 16px Dosis;
 		color: #ACC6F5;
 		opacity: 1;
+		@media (width >= 40rem) {
+			grid-column: span 2;
+			font-size: 24px;
+    	}
 		@media (width >= 64rem) {
 			grid-column: span 2;
 			font-size: 35px;
@@ -449,36 +469,99 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 	}
 
 	#newsletter h1 {
-		font: normal normal 800 120px Dosis;
+		font: normal normal 800 36px Dosis;
 		color: #372B59;
+
+		@media (width >= 40rem) {
+			font-size: 56
+			px;
+		}
+
+		@media (width >= 60rem) {
+			font-size: 80px;
+		}
+
+		@media (width >= 96rem) {
+			font-size: 120px;
+		}
 	}
 
 	#newsletter h2 {
 		text-align: left;
-		font: normal normal bold 35px Quicksand;
+		font: normal normal 14px Quicksand;
 		letter-spacing: 0px;
 		color: #372B59;
 		opacity: 1;
+
+		@media (width >= 48rem) {
+			font-size: 20px;
+		}
+
+		@media (width >= 60rem) {
+			font-size: 30px;
+		}
+
+		@media (width >= 96rem) {
+			font-size: 35px;
+		}
 	}
 
 	footer h1 {
-		font: normal normal 800 60px Dosis;
+		font: normal normal 36px Dosis;
+		font-weight: 800;
+		text-align: center;
+
+		@media (width >= 32rem) {
+			font-size: 44px;
+		}
+
+		@media (width >= 40rem) {
+			font-size: 54px;
+		}
+
+		@media (width >= 48rem) {
+			font-size: 60px;
+		}
+
+		@media (width >= 80rem) {
+			text-align: start;
+		}
 	}
 
 	footer p {
-		text-align: left;
-		font: normal normal normal 25px Quicksand;
+		text-align: center;
+		font: normal normal normal 16px Quicksand;
 		letter-spacing: 0px;
 		color: #24152A;
 		opacity: 1;
+
+		@media (width >= 32rem) {
+			font-size: 20px;
+		}
+
+		@media (width >= 80rem) {
+			text-align: start;
+		}
 	}
 
 	footer a {
-		text-align: left;
-		font: normal normal bold 25px Quicksand;
+		font: normal normal bold 16px Quicksand;
 		letter-spacing: 0px;
 		color: #24152A;
 		opacity: 1;
+
+		@media (width >= 32rem) {
+			font-size: 20px;
+		}
+
+
+		@media (width >= 40rem) {
+			font-size: 22px;
+		}
+
+		@media (width >= 48rem) {
+			font-size: 26px;
+		}
 	}
 
 	footer a:hover {
@@ -487,6 +570,12 @@ import streetlightMainTitleMobile from "../svg/streetlight-studio-main-title-sm.
 
 	footer li {
 		margin-top: 0.3rem;
+		display: flex;
+		justify-content: center;
+
+		@media (width >= 80rem) {
+			justify-content: start;
+		}
 	}
 
 </style>
