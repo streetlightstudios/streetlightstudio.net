@@ -1,0 +1,14 @@
+---
+import "../styles/global.css";
+import "@fontsource/raleway";
+import "@fontsource/quicksand";
+import "@fontsource/dosis";
+
+import Header from "./components/store/Header.astro";
+import StoreList from "./components/store/StoreList";
+---
+<html lang="en">
+    <body class="relative overflow-x-hidden h-screen w-screen flex flex-col bg-[#372B59] text-white font-[Quicksand]">
+        <StoreList client:only="react"/>
+    </body>
+</html>
